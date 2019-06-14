@@ -1,0 +1,8 @@
+---
+- hosts: ravikiran
+  become: yes
+  become_method: sudo
+  user: ansible_ravi
+  tasks:
+    - name: Installs maven
+      apt: pkg=maven state=absent update_cache=true
